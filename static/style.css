@@ -1,0 +1,244 @@
+/* グローバルスタイル */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    /* ダーク背景 */
+    color: #e0e0e0;
+    /* 明るい文字色 */
+    display: flex;
+    flex-direction: row;
+}
+
+/* ヘッダー */
+header {
+    background-color: #3813b0;
+    /* ダークな青灰色 */
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    padding-left: 4vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h1 {
+    color: #b53030;
+}
+
+/* コンテナのレイアウト */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ナビゲーション */
+nav {
+    width: 15vw;
+    background-color: #2a2a2a;
+    /* ナビゲーションの背景色 */
+    padding: 20px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px; */
+}
+
+nav a {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: 10px;
+    /* ダークグレーのボタン背景 */
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444444;
+    /* ホバー時に少し明るく */
+}
+
+.current_page {
+    background-color: #3813b0;
+}
+
+.current_page:hover {
+    background-color: #3813b0;
+}
+
+/* メインコンテンツ */
+main {
+    height: 100vh;
+    flex-grow: 1;
+    background-color: #1f1f1f;
+    /* メインエリアの背景 */
+    padding: 20px;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+}
+
+/* スキャン結果 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #444444;
+    /* グレーの境界線 */
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #333333;
+    /* ヘッダーの背景 */
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+/* ローディングインジケーター */
+.loading {
+    text-align: center;
+    font-size: 1.3em;
+    color: #007BFF;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007BFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 結果がない場合のスタイル */
+#no-results {
+    text-align: center;
+    font-size: 1.2em;
+    color: #e74c3c;
+    /* 警告用の赤 */
+}
+
+/* ボタンスタイル */
+header button {
+    margin-left: 3.2%;
+    width: 6%;
+    height: 5vh;
+    padding: 8px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* フォームの入力フィールド */
+header label {
+    font-size: 0.6em;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    /* 明るい文字色 */
+}
+
+header input {
+    width: 15%;
+    height: 2vh;
+    padding: 5px;
+    margin-right: 3vw;
+    border: 1px solid #444444;
+    background-color: #f0f0f0;
+    /* 入力フィールドの背景 */
+    color: #212121;
+    border-radius: 6px;
+    font-size: 0.8em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+/* ダウンロードリンク */
+#download-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#download-btn {
+    background-color: #007BFF;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#download-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#yaml-editor {
+    flex: 1;
+    /* 残りのスペースを占有 */
+    width: 100%;
+    /* 幅を100%に */
+    border: none;
+    /* ボーダーを削除 */
+    padding: 10px;
+    /* パディングを追加して見やすく */
+    box-sizing: border-box;
+    /* パディングを含めてサイズを計算 */
+    font-family: monospace;
+    /* テキストのフォントをコード用に */
+}
+
+#yaml-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#yaml-form button {
+    align-self: flex-end;
+    /* ボタンを右下に配置 */
+    margin: 10px;
+}

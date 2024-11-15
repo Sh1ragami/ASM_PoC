@@ -1,0 +1,31 @@
+description: 攻撃面の発見方法や対象についての設定ファイル
+
+# 調査対象のドメイン名、IPアドレスなど
+target:
+  - asojuku.ac.jp
+
+include:
+  - subdomain-enum
+
+flags:
+  - safe
+  - passive
+
+
+modules:
+  - nuclei
+
+config:
+  # global config options
+  web:
+    http_proxy: http://127.0.0.1:8080
+  # module config options
+  modules:
+    # api keys
+    securitytrails:
+      api_key: 21a270d5f59c9b05813a72bb41707266
+    virustotal:
+      # multiple API keys are allowed
+      api_key:
+        - 4f41243847da693a4f356c0486114bc6
+        - 5bc6ed268ab6488270e496d3183a1a27
