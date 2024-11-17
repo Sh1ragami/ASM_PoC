@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スキャン設定 - ダークモード</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/scan_style.css">
+</head>
+
+<body>
+    <nav>
+        <h1>麻生使節団</h1>
+        <a href="/" class="current_page">スキャン</a>
+        <a href="/config">スキャン設定</a>
+        <a href="/log">スキャンログ</a>
+        <a href="/guide">使い方</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <form id="bbot-form">
+                スキャンを行う
+                <button id="run-scan-btn">実行</button>
+                <span id="loading" style="display:none; color: red;">Loading...</span>
+            </form>
+        </header>
+
+        <main>
+            <div id="output"></div>
+        </main>
+    </div>
+
+    <script src="../static/script/fetch_result.js"></script>
+</body>
+
+</html>

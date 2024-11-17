@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bbot結果表示</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/user_guide_style.css">
 </head>
 
 <body>
@@ -15,25 +14,97 @@
     <!-- ナビゲーション -->
     <nav>
         <h1>麻生使節団</h1>
-        <a href="/">ダッシュボード</a>
+        <a href="/">スキャン</a>
         <a href="/config">スキャン設定</a>
         <a href="/log">スキャンログ</a>
         <a href="/guide" class="current_page">使い方</a>
     </nav>
 
+
     <div class="container">
         <header>
-            <form id="bbot-form">
-                <label for="target">ターゲットドメイン:</label>
-                <input type="text" id="target" name="target" required>
-                <label for="passive">パッシブスキャンを使用する:</label>
-                <input type="checkbox" id="passive" name="passive" checked disabled>
-                <button type="submit">実行</button>
-            </form>
+            ツールの使用方法
         </header>
 
         <!-- メインコンテンツ -->
         <main>
+            <h2>前提準備</h2>
+            <p>このツールを使用するには、bbotをインストールする必要があります。<br>
+                詳しいインストール方法は、公式ページをご確認ください。<br>
+                <a href="https://github.com/blacklanternsecurity/bbot" style="color: red;">BBOT GitHubページ</a>
+            </p>
+            <p>ツールを使用する前に、以下の情報を用意してください:</p>
+            <ul>
+                <li>調査対象のドメイン名</li>
+                <li>IPアドレス</li>
+                <li>ホスト名</li>
+            </ul>
+
+            <h2>スキャン設定</h2>
+            <p>用意した情報をスキャン設定に入力してください。</p>
+
+            <h2>スキャンの実行</h2>
+            <p>スキャンを実行すると、結果が表形式で表示されます。取得できる情報は以下の通りです:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IPアドレス</td>
+                        <td>調査対象のIPアドレス</td>
+                    </tr>
+                    <tr>
+                        <td>ポート番号</td>
+                        <td>開いているポート番号一覧</td>
+                    </tr>
+                    <tr>
+                        <td>サービス</td>
+                        <td>各ポートで稼働しているサービス</td>
+                    </tr>
+                    <tr>
+                        <td>バナー情報</td>
+                        <td>サービスのバージョン情報など</td>
+                    </tr>
+                    <tr>
+                        <td>脆弱性</td>
+                        <td>検出されたCVE一覧と説明</td>
+                    </tr>
+                    <tr>
+                        <td>クラウド情報</td>
+                        <td>クラウドサービスプロバイダー（例：AWS, Azure, Google Cloud）</td>
+                    </tr>
+                    <tr>
+                        <td>ASN情報</td>
+                        <td>AS番号と関連情報（例：AS番号、ISP情報）</td>
+                    </tr>
+                    <tr>
+                        <td>メールアドレス</td>
+                        <td>公開されている関連メールアドレス</td>
+                    </tr>
+                    <tr>
+                        <td>DNSサーバー</td>
+                        <td>関連するDNSサーバーの情報</td>
+                    </tr>
+                    <tr>
+                        <td>サブドメイン</td>
+                        <td>関連するサブドメインの一覧</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>スキャンログの確認</h2>
+            <p>過去に実行したスキャンログは、いつでも閲覧可能です。各スキャンの詳細は以下の内容を含みます:</p>
+            <ul>
+                <li>スキャン実行日時</li>
+                <li>スキャン対象の情報（ドメイン名、IPアドレス、ホスト名）</li>
+                <li>検出されたサービスと脆弱性のリスト</li>
+                <li>スキャンの成功または失敗のステータス</li>
+            </ul>
         </main>
     </div>
 

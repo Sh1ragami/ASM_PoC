@@ -1,0 +1,76 @@
+/* ファイルリスト */
+select {
+    width: 40%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 4vh;
+}
+
+option {
+    padding: 10px;
+}
+
+/* ファイル内容表示 */
+#file-content {
+    white-space: pre-wrap;
+    /* 改行を維持しつつ折り返す */
+    word-wrap: break-word;
+    /* 長い単語や文字列が行を超えないように折り返す */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: black;
+    margin-top: 20px;
+    flex-grow: 1;
+    /* 残りのスペースを埋める */
+    overflow-y: auto;
+    /* コンテンツが多ければスクロール可能 */
+    max-width: 80vw;
+    /* 横幅の最大値を100%に制限 */
+    max-height: 95vh;
+    box-sizing: border-box;
+    /* パディングも幅に含める */
+}
+
+/* 特定のキーワードに色を付ける */
+.highlight-dns {
+    color: blue;
+}
+
+.highlight-mail {
+    color: orange;
+}
+
+.highlight-asn {
+    color: red;
+}
+
+.highlight-cve {
+    color: rgb(0, 197, 0);
+}
+
+.checkbox-list label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.checkbox-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* 要素間の間隔を調整 */
+}
+
+.font-size-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* スライダーとラベルの間隔を調整 */
+}
+
+
+#font-size-range {
+    width: 150px;
+    /* スライダーの幅 */
+}

@@ -4,8 +4,8 @@ from flask import Blueprint, send_from_directory, jsonify
 # Blueprintオブジェクトを作成
 download_bp = Blueprint('download', __name__)
 
-# 出力ファイル保存用ディレクトリの指定
-OUTPUT_DIR = './output_files'
+# 出力ファイル保存用ディレクトリの絶対パスを指定
+OUTPUT_DIR = os.path.abspath('./output_files')  # 相対パスを絶対パスに変換
 
 @download_bp.route('/download/<filename>')
 def download_file(filename):

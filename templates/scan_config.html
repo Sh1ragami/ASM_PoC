@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>スキャン設定</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/scan_config_style.css">
+
+    <!-- CodeMirrorのCSSとJavaScriptをCDNで読み込む -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/theme/blackboard.min.css">
 
 </head>
 
@@ -15,36 +19,34 @@
     <!-- ナビゲーション -->
     <nav>
         <h1>麻生使節団</h1>
-        <a href="/">ダッシュボード</a>
+        <a href="/">スキャン</a>
         <a href="/config" class="current_page">スキャン設定</a>
         <a href="/log">スキャンログ</a>
         <a href="/guide">使い方</a>
-
     </nav>
 
     <div class="container">
         <header>
-            <form id="bbot-form">
-                <label for="target">ターゲットドメイン:</label>
-                <input type="text" id="target" name="target" required>
-                <label for="passive">パッシブスキャンを使用する:</label>
-                <input type="checkbox" id="passive" name="passive" checked disabled>
-                <button type="submit">実行</button>
-            </form>
+            スキャン設定を変更
         </header>
 
         <!-- メインコンテンツ -->
         <main>
-
             <form id="yaml-form">
-                <textarea id="yaml-editor" rows="40" cols="170"></textarea><br>
+                <div class="editor-container">
+                    <textarea id="yaml-editor"></textarea>
+                </div>
                 <button type="submit">保存</button>
             </form>
+
             <div id="message"></div>
         </main>
     </div>
 
-    <script src="../static/yaml.js"></script>
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="../static/script/yaml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/mode/yaml/yaml.min.js"></script>
 </body>
 
 </html>

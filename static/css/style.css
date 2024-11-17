@@ -25,6 +25,7 @@ header {
 }
 
 h1 {
+    font-size: 2vw;
     color: #b53030;
 }
 
@@ -51,7 +52,7 @@ nav a {
     margin-bottom: 15px;
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.1em;
+    font-size: 1.2vw;
     padding: 10px;
     /* ダークグレーのボタン背景 */
     border-radius: 6px;
@@ -109,22 +110,6 @@ th {
     font-size: 1.1em;
 }
 
-/* ローディングインジケーター */
-.loading {
-    text-align: center;
-    font-size: 1.3em;
-    color: #007BFF;
-}
-
-.spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #007BFF;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-}
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -133,14 +118,6 @@ th {
     100% {
         transform: rotate(360deg);
     }
-}
-
-/* 結果がない場合のスタイル */
-#no-results {
-    text-align: center;
-    font-size: 1.2em;
-    color: #e74c3c;
-    /* 警告用の赤 */
 }
 
 /* ボタンスタイル */
@@ -189,13 +166,6 @@ input:focus {
     outline: none;
 }
 
-/* チェックボックス */
-input[type="checkbox"] {
-    margin: 0;
-    width: auto;
-    height: auto;
-}
-
 /* ダウンロードリンク */
 #download-link {
     text-align: center;
@@ -216,29 +186,3 @@ input[type="checkbox"] {
     transform: scale(1.05);
 }
 
-#yaml-editor {
-    flex: 1;
-    /* 残りのスペースを占有 */
-    width: 100%;
-    /* 幅を100%に */
-    border: none;
-    /* ボーダーを削除 */
-    padding: 10px;
-    /* パディングを追加して見やすく */
-    box-sizing: border-box;
-    /* パディングを含めてサイズを計算 */
-    font-family: monospace;
-    /* テキストのフォントをコード用に */
-}
-
-#yaml-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-#yaml-form button {
-    align-self: flex-end;
-    /* ボタンを右下に配置 */
-    margin: 10px;
-}

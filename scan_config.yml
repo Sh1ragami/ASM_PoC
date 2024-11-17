@@ -2,7 +2,7 @@ description: 攻撃面の発見方法や対象についての設定ファイル
 
 # 調査対象のドメイン名、IPアドレスなど
 target:
-  - asojuku.ac.jp
+  - example.com
 
 include:
   - subdomain-enum
@@ -11,21 +11,95 @@ flags:
   - safe
   - passive
 
-
 modules:
-  - nuclei
 
 config:
-  # global config options
-  web:
-    http_proxy: http://127.0.0.1:8080
-  # module config options
+
   modules:
-    # api keys
+  
+    # APIキー設定
+# ---------------------------------------------------------------------------------------
+
+    bevigil:
+      # BevigilのAPIキー
+      api_key: 
+
+    binaryedge:
+      # BinaryEdgeのAPIキー
+      api_key: 
+
+    bufferoverrun:
+      # BufferoverrunのAPIキー
+      api_key: 
+
+    builtwith:
+      # BuiltWithのAPIキー
+      api_key: 
+
+    c99:
+      # c99のAPIキー
+      c99: 
+
+    censys:
+      # CensysのAPIキー
+      api_key: 
+
+    chaos:
+      # ChaosのAPIキー
+      api_key: 
+
+    credshed:
+      # CredshedのAPIキー
+      api_key: 
+
+    dehashed:
+      # DehashedのAPIキー
+      api_key: 
+
+    fullhunt:
+      # FullHuntのAPIキー
+      api_key: 
+
+    github_codesearch:
+      # GitHub Code SearchのAPIキー
+      api_key: 
+
+    hunterio:
+      # Hunter.ioのAPIキー
+      api_key: 
+
+    ip2location:
+      # IP2LocationのAPIキー
+      api_key: 
+
+    ipstack:
+      # IPStackのAPIキー
+      api_key: 
+
+    passivetotal:
+      # PassiveTotalのAPIキー
+      api_key: 
+
     securitytrails:
-      api_key: 21a270d5f59c9b05813a72bb41707266
+      # securitytrailsのAPIキー
+      api_key: 
+
+    shodan_dns:
+      # Shodan DNSのAPIキー
+      api_key: 
+
+    subdomainradar:
+      # SubdomainRadarのAPIキー
+      api_key: 
+
+    trickest:
+      # TrickestのAPIキー
+      api_key: 
+
     virustotal:
-      # multiple API keys are allowed
-      api_key:
-        - 4f41243847da693a4f356c0486114bc6
-        - 5bc6ed268ab6488270e496d3183a1a27
+      # virustotalのAPIキー
+      api_key: 
+
+    zoomeye:
+      # ZoomeyeのAPIキー
+      api_key: 

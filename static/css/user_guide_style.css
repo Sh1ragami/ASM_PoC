@@ -1,0 +1,12 @@
+main {
+    border: 1px solid #ccc;
+    background-color: black;
+    /* 残りのスペースを埋める */
+    overflow-y: auto;
+    /* コンテンツが多ければスクロール可能 */
+    max-width: 80vw;
+    /* 横幅の最大値を100%に制限 */
+    max-height: 95vh;
+    box-sizing: border-box;
+    /* パディングも幅に含める */
+}

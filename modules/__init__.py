@@ -10,11 +10,13 @@ def create_app():
     from modules.bbot_runner import bbot_bp
     from modules.download import download_bp
     from modules.yaml_handler import yaml_bp
+    from modules.log import log_bp
 
     app.register_blueprint(pages_bp)
     app.register_blueprint(bbot_bp)
     app.register_blueprint(download_bp)
     app.register_blueprint(yaml_bp)
+    app.register_blueprint(log_bp)
 
     return app
 
