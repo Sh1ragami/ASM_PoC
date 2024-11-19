@@ -8,8 +8,9 @@
 
 このツールを使用するには、以下の環境が必要です：
 
-- **Linux** または **macOS**（Windowsでも使用可能ですが、推奨環境はLinux）
+- **Linux**
 - **Python 3.x**
+- **flask**, **flask_cors**
 - **bbot** (詳細は [bbot GitHubページ](https://github.com/blacklanternsecurity/bbot) を参照)
 
 インストール手順は、[bbotのインストールガイド](https://github.com/blacklanternsecurity/bbot) に従ってください。
